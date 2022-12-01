@@ -1,12 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { saveToken, saveUser } from "../storage/Storage";
+import { saveToken, saveUser, saveAvatar } from "../storage/Storage";
 import { BASE_URL, TOKEN_PATH } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 function Form() {
     const navigate = useNavigate();
-    const [loginInfo, setLoginInfo] = useState();
     const [errorMessage, setError] = useState();
     const {
         register,
@@ -15,8 +14,7 @@ function Form() {
     } = useForm();
 
     const onSubmit = (data) => {
-        setLoginInfo(data);
-        login(loginInfo.email, loginInfo.password);
+        login(data.email, data.password);
     };
 
     function login(userEmail, userPassword) {
@@ -46,7 +44,8 @@ function Form() {
                 setError("Wrong Password or email");
             } else {
                 saveToken(json.accessToken);
-                saveUser(json.email);
+                saveUser(json.name);
+                saveAvatar(json.avatar)
                 navigate("/");
                 console.log("right password");
             }
@@ -57,7 +56,7 @@ function Form() {
         <div className="mt-[200px]">
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className=" bg-[#070707] my-[0] mx-[auto] flex flex-col w-[100%] max-w-[600px] h-[100%] items-center rounded-[10px]"
+                className=" my-[0] mx-[auto] flex flex-col w-[100%] max-w-[600px] h-[100%] items-center rounded-[10px]"
             >
                 <h1 className="text-center">Login</h1>
                 <div className="flex flex-col w-[100%] pl-[30px] pr-[41px]">

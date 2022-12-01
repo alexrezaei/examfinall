@@ -8,7 +8,7 @@ function Homepage() {
         <div className="w-full px-[70px]">
             <Navigationbar />
             <Hero />
-            <div className="mt-[40px] flex justify-center">
+            <div className="w-full mt-[40px] flex justify-between flex-wrap mx-[auto]">
                 <Card
                     image={iconChat}
                     title="react to each others posts"

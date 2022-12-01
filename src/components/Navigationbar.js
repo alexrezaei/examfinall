@@ -3,7 +3,9 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { getToken } from "./storage/Storage";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { getUser } from "./storage/Storage"
 function Navigationbar() {
+    const user = getUser();
     const navigate = useNavigate();
     let token = JSON.parse(localStorage.getItem("token"));
     const [nav, setNav] = useState(false);
@@ -29,19 +31,21 @@ function Navigationbar() {
                         <li>
                             <NavLink to="/profiles">Profiles</NavLink>
                         </li>
-                        <li>
-                            <NavLink to="/profile">Profile</NavLink>
-                        </li>
                         {token ? (
+                            <>
+                            <li>
+                                <NavLink to="/profile">Profile</NavLink>
+                            </li>
                             <li className="cursor-pointer" onClick={logOut}>
                                 Logout
                             </li>
+                            </>
                         ) : (
                             <div className="flex">
                                 <li className="">
                                     <NavLink to="/login">Login</NavLink>
                                 </li>
-                                <li>Register</li>
+                                <li><NavLink to="/register">register</NavLink></li>
                             </div>
                         )}
                     </ul>
