@@ -7,6 +7,8 @@ import Profilepage from "./pages/Profilepage";
 import SinglePost from "./components/SinglePost";
 import VisitProfile from "./components/profile/VisitProfile";
 import Profile from "./components/profile/Profile";
+import Postpage from "./pages/Postpage";
+import AllPosts from "./components/AllPosts";
 
 function App() {
     return (
@@ -14,11 +16,13 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/login" element={<Loginpage />} />
             <Route path="/register" element={<Registerpage />} />
+            <Route path="/allposts" element={<AllPosts />} />
             <Route path="/profile" element={<Profilepage />} >
                 <Route path="/profile/" element={<Profile />} />
                 <Route path="/profile/:name" element={<VisitProfile />} />
             </Route>
             <Route path="/posts/:postId" element={<SinglePost />} />
+            <Route path="/allposts" element={<Postpage />} />
         </Routes>
     );
 }

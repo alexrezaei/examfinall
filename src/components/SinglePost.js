@@ -50,8 +50,8 @@ function SinglePost() {
 			<Navigationbar />
 			<div className='max-w-[650px] px-[20px] py-[20px] bg-[#1A1919] mx-[auto] rounded-[10px]'>
 					<div className='flex flex-col items-center'>
-						<div className='w-[80px] h-[80px] rounded-[5px]'>
-							<img className='w-full h-full' src={postInfo.author.avatar ? postInfo.author.avatar : blankProfile } alt='User avatar'/>
+						<div className='w-[80px] h-[80px]'>
+							<img className='w-full h-full rounded-[5px]' src={postInfo.author.avatar ? postInfo.author.avatar : blankProfile } alt='User avatar'/>
 						</div>
 						<Link className='text-[20px] text-[#13D5FF]' to={"/profile/" + postInfo.author.name}>{postInfo.author.name}</Link>
 					</div>

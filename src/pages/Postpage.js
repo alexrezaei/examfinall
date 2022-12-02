@@ -1,8 +1,11 @@
 import React from 'react'
+import AllPosts from '../components/AllPosts'
 
 function Postpage() {
   return (
-    <div>Postpage</div>
+    <div>
+      <AllPosts />
+    </div>
   )
 }
 

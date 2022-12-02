@@ -26,7 +26,7 @@ function Navigationbar() {
                             <NavLink to="/">Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/posts">Posts</NavLink>
+                            <NavLink to="/allposts">Posts</NavLink>
                         </li>
                         <li>
                             <NavLink to="/profiles">Profiles</NavLink>
