@@ -11,6 +11,7 @@ import Postpage from "./pages/Postpage";
 import AllPosts from "./components/AllPosts";
 import AllProfiles from "./components/profiles/AllProfiles";
 import AllProfilesPage from "./pages/AllProfilesPage";
+import EditPost from "./components/EditPost";
 
 function App() {
     return (
@@ -20,7 +21,8 @@ function App() {
             <Route path="/register" element={<Registerpage />} />
             <Route path="/allposts" element={<AllPosts />} />
             <Route path="/profiles" element={<AllProfilesPage />} />
-            <Route path="/profile" element={<Profilepage />} >
+            <Route path="/editpost/:id" element={<EditPost />} />
+            <Route path="/profile" element={<Profilepage />}>
                 <Route path="/profile/" element={<Profile />} />
                 <Route path="/profile/:name" element={<VisitProfile />} />
             </Route>
