@@ -30,7 +30,7 @@ function Hero() {
                     Try out Social you today!
                 </h1>
                 <div className="mt-11 flex flex-col items-center sm:flex-row">
-                    <button onClick={redirectForLogin} className="mr-[0px] mb-[20px] sm:mr-[37px] sm:mb-[0px]">Login</button>
+                    <button onClick={redirectForLogin} className="mr-[10px] mb-[20px] sm:mr-[37px] sm:mb-[0px]">Login</button>
                     <button onClick={redirectForRegister}>signup</button>
                 </div>
             </div>

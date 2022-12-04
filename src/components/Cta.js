@@ -26,13 +26,13 @@ function Cta() {
         <div className="flex flex-col md:flex-row">
             <div className="w-[100%] md:w-[50%]">
                 <h2>View fresh posts from our users!</h2>
-                <div className="mt-[30px] mb-[30px] md:mb-[0px]">
+                <div className="mt-[30px] mb-[30px]">
                     <button onClick={redirectForPosts} className="md:mb-[20px]">View posts</button>
                     <button onClick={redirectForProfiles}>View profiles</button>
                 </div>
             </div>
-            <div className="w-[100%] md:w-[50%]">
-                <img src={img1} />
+            <div className="w-[100%] md:w-[50%] ">
+                <img className="rounded-10px rounded-[10px]" src={img1} />
             </div>
         </div>
     );
