@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Cta from "../components/Cta";
 import Navigationbar from "../components/Navigationbar";
 function Homepage() {
+    document.title = 'Homepage'
     return (
         <div className="w-full px-[70px]">
             <Navigationbar />

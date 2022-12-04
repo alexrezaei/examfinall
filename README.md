@@ -1,11 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -13,11 +5,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -29,42 +16,41 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `First step`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To use the social media site you need to first register a account with a valid noroff.no or stud.noroff.no email.\
+After registering an account you will need to login to get access to various features of the website. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `Your Profile information`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Your profile information can be found at /profile/
 
-## Learn More
+### `Updating Your Banner and Avatar`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To update your Banner or Avatar you will need to visit /profile/. 
+Here you will see your profile information and a form which takes two inputs, you only need to fill out one of the two inputs to update.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### `Your posts / Delete post`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+at /profile/ under the profile information there will be a list of your posts where you can see all the posts you have created. \
+You can Also choose to delete any of your posts here. 
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### `All posts / visit Profile / follow/unfollow profile`
+/allposts/ contains all posts by users you will get a list of posts with titles which you can choose to visit and see more of such as the contents of the post. /
+You can visit a profile by first checking out a post then clicking the username of the author of the post, there you will redirected to the specific user and visit their profile page, here you will see their profile information and all their posts and also a follow/unfollow buttons.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### `How this project was made` 
 
-### Advanced Configuration
+This project was made using 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. React
+2. Tailwind
+3. react-router-dom
 
-### Deployment
+Design done in 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. figma

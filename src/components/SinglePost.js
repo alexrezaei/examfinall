@@ -48,7 +48,7 @@ function SinglePost() {
   return (
     <div className='px-[70px]'>
 			<Navigationbar />
-			<div className='max-w-[650px] px-[20px] py-[20px] bg-[#1A1919] mx-[auto] rounded-[10px]'>
+			<div className='max-w-[650px] px-[20px] py-[20px] mt-[70px] bg-[#1A1919] mx-[auto] rounded-[10px]'>
 					<div className='flex flex-col items-center'>
 						<div className='w-[80px] h-[80px]'>
 							<img className='w-full h-full rounded-[5px]' src={postInfo.author.avatar ? postInfo.author.avatar : blankProfile } alt='User avatar'/>

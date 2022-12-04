@@ -53,7 +53,7 @@ function Form() {
     }
 
     return (
-        <div className="mt-[200px]">
+        <div className="mt-[70px]">
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className=" my-[0] mx-[auto] flex flex-col w-[100%] max-w-[600px] h-[100%] items-center rounded-[10px]"

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from "react"
 import { BASE_URL } from "../api/api"
 import Navigationbar from './Navigationbar';
+import NewPost from './NewPost';
 import Posts from './Posts';
 import { getToken } from "./storage/Storage"
 function AllPosts() {
@@ -30,6 +31,7 @@ function AllPosts() {
     <div className='px-[70px]'>
       <Navigationbar />
       <h1 className='text-center mt-[70px] mb-[20px]'>All posts</h1>
+      <NewPost />
       <div>
         {postInfo.map(post => <Posts key={post.id} title={post.title} user={post.author.name} avatar={post.author.avatar} id={post.id} />)}
       </div>

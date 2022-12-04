@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import blankProfile  from "../assets/blankprofile.png";
+import DeletePost from "./DeletePost";
 function Posts(props) {
   return (
     <div>
@@ -21,8 +22,9 @@ function Posts(props) {
 									<p className=''>Post date:</p>
 									<p>{props.date}</p>
 							</div>
-							<div>
+							<div className='flex flex-col'>
 								<Link to={"/posts/" + props.id}>View more</Link>
+								<DeletePost id={props.id} />
 							</div>
 						</div>
         </div>

@@ -4,6 +4,7 @@ import Navigationbar from "../components/Navigationbar";
 import ProfilePosts from '../components/profile/ProfilePosts';
 import { Outlet } from "react-router-dom";
 function Profilepage() {
+  document.title = 'Profile'
   return (
     <div className='px-[70px]'>
         <Navigationbar />

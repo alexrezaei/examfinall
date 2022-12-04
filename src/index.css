@@ -5,9 +5,12 @@
 
 @layer base {
   h1 {
-    @apply text-[65px] font-bold
+    @apply text-[40px] font-bold sm:text-[65px]
   }
-  h1,h2,h3,p,a,li {
+  a {
+    @apply text-[#13D5FF] hover:text-white
+  }
+  h1,h2,h3,p,li {
     @apply text-white
   }
   body {
@@ -17,7 +20,7 @@
     @apply p-4 text-white text-[20px]
   }
   button {
-    @apply px-[47px] py-[15px] border-[1px] rounded-[10px]  border-solid border-white text-[20px] font-bold text-white
+    @apply px-[47px] py-[15px] border-[1px] rounded-[10px]  border-solid border-white text-[20px] font-bold text-white hover:bg-white hover:text-black
   }
 
   input {

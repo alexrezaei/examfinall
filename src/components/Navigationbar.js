@@ -15,24 +15,24 @@ function Navigationbar() {
         navigate("/");
     };
     return (
-        <div className="w-[100%] h-[80px]">
+        <div className="w-full h-[80px]">
             <div className="flex items-center justify-between w-full h-full">
                 <div className="flex items-center">
-                    <h1 className="font-bold sm:text-[28px] text-white">
+                    <p className="font-bold text-[28px] text-white">
                         Social You
-                    </h1>
+                    </p>
                     <ul className="hidden lg:flex">
                         <li>
                             <NavLink to="/">Home</NavLink>
                         </li>
-                        <li>
-                            <NavLink to="/allposts">Posts</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/profiles">Profiles</NavLink>
-                        </li>
                         {token ? (
                             <>
+                            <li>
+                            <NavLink to="/allposts">Posts</NavLink>
+                            </li>
+                            <li>
+                            <NavLink to="/profiles">Profiles</NavLink>
+                            </li>
                             <li>
                                 <NavLink to="/profile">Profile</NavLink>
                             </li>
@@ -43,9 +43,9 @@ function Navigationbar() {
                         ) : (
                             <div className="flex">
                                 <li className="">
-                                    <NavLink to="/login">Login</NavLink>
+                                    <NavLink className="text-bold" to="/login">Login</NavLink>
                                 </li>
-                                <li><NavLink to="/register">register</NavLink></li>
+                                <li><NavLink className="text-bold" to="/register">register</NavLink></li>
                             </div>
                         )}
                     </ul>
@@ -59,25 +59,27 @@ function Navigationbar() {
                 </div>
             </div>
 
-            <ul className={!nav ? "hidden" : "absolute bg-black w-full px-8"}>
+            <ul className={!nav ? "hidden" : "relative bg-black w-full px-8 flex flex-col items-center"}>
                 <li>
                     <NavLink to="/">Home</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/posts">Posts</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/profiles">Profiles</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/profile">Profile</NavLink>
-                </li>
                 {token ? (
-                    <li className="cursor-pointer" onClick={logOut}>
+                    <>
+                    <li>
+                    <NavLink to="/allposts">Posts</NavLink>
+                    </li>
+                    <li>
+                    <NavLink to="/profiles">Profiles</NavLink>
+                    </li>
+                    <li>
+                    <NavLink to="/profile">Profile</NavLink>
+                    </li>
+                    <li className="cursor-pointer text-[#13D5FF]" onClick={logOut}>
                         Logout
                     </li>
+                    </>
                 ) : (
-                    <div className="flex-col lg:flex">
+                    <div className="flex flex-col lg:flex items-center">
                         <li className="">
                             <NavLink to="/login">Login</NavLink>
                         </li>

@@ -9,6 +9,8 @@ import VisitProfile from "./components/profile/VisitProfile";
 import Profile from "./components/profile/Profile";
 import Postpage from "./pages/Postpage";
 import AllPosts from "./components/AllPosts";
+import AllProfiles from "./components/profiles/AllProfiles";
+import AllProfilesPage from "./pages/AllProfilesPage";
 
 function App() {
     return (
@@ -17,6 +19,7 @@ function App() {
             <Route path="/login" element={<Loginpage />} />
             <Route path="/register" element={<Registerpage />} />
             <Route path="/allposts" element={<AllPosts />} />
+            <Route path="/profiles" element={<AllProfilesPage />} />
             <Route path="/profile" element={<Profilepage />} >
                 <Route path="/profile/" element={<Profile />} />
                 <Route path="/profile/:name" element={<VisitProfile />} />
